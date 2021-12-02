@@ -18,15 +18,17 @@
 ?>
 <h2 style="text-align: center; color: #FFEBC9"> Comic </h2>
 <br>
+
 <div class="row">
     <?php 
         include '../connection.php';
         $qry_comic = mysqli_query($conn, "select * from comic");
         while ($dt_comic=mysqli_fetch_array($qry_comic)) {
         ?>
-    <div class="col-md-3">
+     <!-- <div class="container bg-light rounded" style="margin-top:10px"></div> -->
+    <div class="col-md-3" style = "margin-right: 2%; margin-left: 3%; width: 20%">
         <div class="card"  style="background: #753422">
-            <img img src="<?php echo "../../assets/images/comic/".$dt_comic['foto_comic']; ?>" class="card-img-top" width="118px" height="300px">
+            <img img src="<?php echo "../../assets/images/comic/".$dt_comic['foto_comic']; ?>" class="card-img-top" style = "height: 350px">
             <div class="card-body">
                 <p class="card-text" style="color: #FFEBC9">
                     <?=$dt_comic['pengarang']?>
@@ -42,11 +44,12 @@
             </div>
         </div>
     </div>
+    
     <?php
     }
     ?>
     <?php 
     include "../footer.php";
-?>    
+    ?>    
 </body>
 </html>

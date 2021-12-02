@@ -1,3 +1,10 @@
+<?php 
+session_start();
+// if($_SESSION['level'] == ""){
+// 	header("../index.php?alert=belum_login")
+// ;}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +12,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Add Comic</title>
-	    <style>
-        body{
-            background-image: url(cover2.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 120%;
-            position: relative;
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/style-comic.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body>
+<body class = "bg">
 	<?php
 	include '../header.php'; 
 	?>
+	<div style = "margin-right: 5%; margin-left: 5%">
 <center><h3 style="color: #FFEBC9">TAMBAH COMIC</h3></center>
 <form action="proses_tambah_comic.php" method="post" enctype="multipart/form-data">
 	<div class="table-responsive">
@@ -58,6 +58,7 @@
 			</tr>
 		</thead>
 	</table>
+	</div>
 	<script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"

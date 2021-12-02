@@ -3,24 +3,67 @@
         <title>Toko Buku Online</title>
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
         <body>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+         style="box-shadow: 4px 4px 5px -4px; background: #753422;">
+    <div class="container-fluid">
+    <a class="navbar-brand" style = "color : #FFEBC9" href="#">OWL BOOK STORE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"href="index.php">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="index.php">Category</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="index.php">About</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="cart/cart.php">Cart</a>
+    </li>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="signin/signin.php">Log In</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="signup/signup.php">Register</a>
+    </li>
+    </li>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="logout.php">Log Out</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+</nav>
         <section>
-            <!--navigation-->
-            <?php include "header.php" ?>
-            
-            <?php 
+            <!--navigation-->            
+            <?php
+            session_start(); 
             if (isset($_SESSION['first_name'])) {
             ?>
             <div class="text-container">
                 <h1>Hello <?= $_SESSION['first_name'] ?> Welcome to OWL BOOK STORE</h1>
-                <p class="text">Provides a variety of books ranging from educational books, novels, comics, stationery, and many others</p>
+                <p class="text"  style="margin-top: 1%">Provides a variety of books ranging from educational books, novels, comics, stationery, and many others</p>
                 <a class="bshop"><button class="shop">SHOP NOW</button></a>
             </div>
             <?php } else { ?>
-            <div class="text-container">
-                <h1>OWL BOOK STORE</h1>
-                <p class="text">Provides a variety of books ranging from educational books, novels, comics, stationery, and many others</p>
+            <div class="text-container" >
+                <h1 >OWL BOOK STORE</h1>
+                <p class="text" style="margin-top: 1%">Provides a variety of books ranging from educational books, novels, comics, stationery, and many others</p>
                 <a class="bshop"><button class="shop">SHOP NOW</button></a>
             </div>
             <?php } ?>

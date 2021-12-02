@@ -17,9 +17,10 @@
 
 <h2 align="center" style="color: #FFEBC9">Daftar Buku di Keranjang</h2>
 <br>
+<div  style = "margin-left: 5%; margin-right: 5%">
 <div class="table-responsive">
-<table class="table table-hover striped">
-    <thead style="color: #FFEBC9">
+<table class="table" style="color: #FFEBC9">
+    <thead>
         <tr>
             <th>NO</th>
             <th>Nama Buku</th>
@@ -29,8 +30,9 @@
     </thead>
     <tbody>
         <?php
-        $cart = $_SESSION['cart'];
-        // if (isset($_SESSION['cart'])) $cart = @$_SESSION['cart']; 
+        session_start();
+        $cart = [];
+        if (isset($_SESSION['cart'])) $cart = @$_SESSION['cart']; 
         $no = 1;
         foreach ($cart as $key_produk => $val_produk):?>
         <tr style="color: #FFEBC9">
@@ -38,13 +40,14 @@
             <td><?=$val_produk['judul']?></td>
             <td><?=$val_produk['qty']?></td>
             <td style="text-align: right;"><a href="../ubah_jumlah/ubah_jumlah_beli.php?id=<?=$key_produk?>" class="btn btn-success">Ubah</a></td>
-            <td ><a href="../../hapus_cart.php?id=<?=$key_produk?>" class="btn btn-danger">Hapus</a></td>
+            <td ><a href="../hapus_cart.php?id=<?=$key_produk?>" class="btn btn-danger">Hapus</a></td>
         </tr>
         <?php endforeach ?>
     </tbody>
 </table>
 </div>
 <a href="../checkout.php" class="btn btn-primary">Check Out</a>
+</div>
 <?php 
     include "../footer.php";
 ?>

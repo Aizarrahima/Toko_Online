@@ -6,16 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histori Pembelian</title>
     <link rel="stylesheet" href="../assets/css/style-comic.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
 </head>
 <body class="bg">
-    <?php 
-include "header.php";
-?>
-<h2 style="color: #FFEBC9">Histori Pembelian Buku</h2>
+    <nav class="navbar navbar-expand-lg navbar-light"
+         style="box-shadow: 4px 4px 5px -4px; background: #753422;">
+    <div class="container-fluid">
+    <a class="navbar-brand" style = "color : #FFEBC9" href="#">OWL BOOK STORE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"href="index.php">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="index.php">Category</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="index.php">About</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="cart/cart.php">Cart</a>
+    </li>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="signin/signin.php">Log In</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="signup/signup.php">Register</a>
+    </li>
+    </li>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" style = "color : #FFEBC9" aria-current="page"
+        href="logout.php">Log Out</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+</nav>
+<div style="margin-right: 2%; margin-left: 2%">
+<h2 style="color: #FFEBC9; text-align: center"><strong>Histori Pembelian Buku</strong></h2>
 <br>
 <div class="table-responsive">
-<table class="table table-hover table-striped">
-    <thead style = "text-align: center; color: #FFEBC9">
+<table class="table" style = "color : #FFEBC9">
+    <thead style = "text-align: center;">
         <th>NO</th>
         <th>Invoice</th>
         <th>Tanggal Beli</th>
@@ -65,6 +107,7 @@ include "header.php";
         ?>
     </tbody>
 </table>
+</div>
 </div>
 <?php 
     include "footer.php";

@@ -7,9 +7,9 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="../../assets/css/style-stationery.css">
     </head>
-    
+
     <body>
-        <?php include "../header.php"; ?>
+        <?php include "../header.php" ?>
         <section></section>
         <!--text-->
         <div class="stationery-container">
@@ -35,6 +35,7 @@
                         <h1>Rp 49.000</h1>
                     </div>
                 </div>
+
                 <div class="box">
                     <div class="stationery">
                         <img src="../../assets/images/stationery/3M-post-it.png" alt="post it" width="110px" height="150px" style="margin-left: 29%;" align="center">
