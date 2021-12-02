@@ -1,0 +1,192 @@
+body, html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.bg {
+    background-image: url(../images/cover2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120%;
+    position: relative;
+}
+
+.topnav{
+    overflow: hidden;
+    background-color: #753422;
+    position: fixed;
+    top: 0;
+    height: 8%;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+/* Style the links inside navigation bar*/
+.topnav a{
+    float: left;
+    display: block;
+    color: #FFEBC9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav ul{
+    list-style: none;
+    display: flex;
+}
+
+/* Change the color of link on hover */
+.topnav a:hover{
+    background-color:#B05B3B;
+    color: #FFEBC9;
+    border-radius: 15px;
+
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+    background-color: #B05B3B;
+    color: #FFEBC9;
+    border-radius: 15px;
+}
+
+.topnav .search-container{
+    float: right;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    border-radius:5px;
+    width: 300px;
+    margin-top: 8px;
+    margin-right: 100px;
+    font-size: 17px;
+    background: #FFEBC9;
+    color: #753422;
+}
+
+.topnav .search-container button{
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: -1px;
+    height: 32px;
+    background: #D79771;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.topnav .search-container button:hover {
+    background: #B05B3B;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+    .topnav a .search-container{
+        float: none;
+    } 
+    .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid;
+    }
+}
+
+.comic-container{
+    margin-top: -850px;
+    padding: 0.1% 0;
+    align-items: center;
+    margin-bottom: 0px;
+    position: absolute;
+}
+
+.comic-container h1{
+    font-family: calibri;
+    font-weight: bold;
+    color: #FFEBC9;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 30px;
+}
+
+.comic-container .box-comic .box{
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 200px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex;
+}
+
+.comic-container .box-comic .box .comic{
+    background: #753422;
+    width: 250px;
+    height: 310px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 40 px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 120px;
+}
+
+.comic-container .box-comic .box img{
+    margin-top: 15px;
+    margin-left: 70px;
+}
+
+.comic-container h4{
+    font-family: calibri;
+    font-weight: lighter;
+    color: #FFEBC9;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.comic-container .box-comic .box h2{
+    text-align: center;
+    font-family: calibri;
+    font-weight: bold;
+    font-size: 18px;
+    color: #D79771;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.comic-container .box-comic .box h1{
+    margin-top: -2px;
+    text-align: center;
+    font-family: calibri;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #FFEBC9;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
